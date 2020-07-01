@@ -1,0 +1,16 @@
+.navbar-brand {
+  margin-left: 5rem;
+}
+
+.navbar-nav {
+  margin-right: 5rem;
+}
+
+@media screen and (max-width: 1520px) {
+  .navbar-brand {
+    margin-left: 0;
+  }
+  .navbar-nav {
+    margin-right: 0;
+  }
+}
