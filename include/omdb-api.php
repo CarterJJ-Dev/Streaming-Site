@@ -20,7 +20,7 @@ foreach($files as $file) {
 	$title = str_replace('.', '+', $title);
 
   // OMDB API call
-	$obj = json_decode(file_get_contents('http://www.omdbapi.com/?t=' . $title . '&y=' . $year . '&apikey=7e54a727'), true);
+	$obj = json_decode(file_get_contents('http://www.omdbapi.com/?t=' . $title . '&y=' . $year . '&apikey=YOUR-OMDB-API-KEY-HERE'), true);
 	if($obj['Response'] == 'False') {
       // If search unsuccessful move file to error directory
 	    shell_exec("mv " . escapeshellarg($file) . " " . escapeshellarg('../videos/error/'));
