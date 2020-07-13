@@ -17,7 +17,7 @@ if (isset($_GET['id'])) {
         <div class="col-xl-4 col-md-12">
           <img class="card-img-top mx-auto d-block" src="<?php echo $img; ?>" style="width: 16rem">
           <div class=" mx-auto d-block text-center" style="width: 16rem;">
-            <a href="play.php" class="btn btn-primary mt-2">Play</a>
+            <a href="play.php?video=<?php echo $file_name; ?>" class="btn btn-primary mt-2">Play</a>
             <a href="https://www.redirect.am/?https://www.youtube.com/watch?v=<?php echo $trailer; ?>" class="btn btn-primary mt-2">Trailer</a>
             <a href="https://www.redirect.am/?https://www.imdb.com/title/<?php echo $imdb; ?>" class="btn btn-primary mt-2">IMDb</a>
           </div>
@@ -36,6 +36,4 @@ if (isset($_GET['id'])) {
   </div>
 </div>
 
-<?php
-include('template/footer.php');
-?>
+<?php include('template/footer.php'); ?>
