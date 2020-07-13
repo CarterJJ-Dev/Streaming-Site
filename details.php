@@ -12,13 +12,12 @@ if (isset($_GET['id'])) {
     <?php
       while($row = $result->fetch_assoc()) {
         $name = $row["name"]; $plot = $row["plot"]; $cast = $row["cast"]; $year = $row["year"]; $runtime = $row["runtime"]; $rated = $row["rated"]; $rating = $row["rating"];
-        $imdb = $row["imdb"]; $img = $row["img"]; $trailer = $row["trailer"]; $file_name = $row["file_name"];
+        $imdb = $row["imdb"]; $img = $row["img"]; $file_name = $row["file_name"];
     ?>
         <div class="col-xl-4 col-md-12">
           <img class="card-img-top mx-auto d-block" src="<?php echo $img; ?>" style="width: 16rem">
           <div class=" mx-auto d-block text-center" style="width: 16rem;">
             <a href="play.php?video=<?php echo $file_name; ?>" class="btn btn-primary mt-2">Play</a>
-            <a href="https://www.redirect.am/?https://www.youtube.com/watch?v=<?php echo $trailer; ?>" class="btn btn-primary mt-2">Trailer</a>
             <a href="https://www.redirect.am/?https://www.imdb.com/title/<?php echo $imdb; ?>" class="btn btn-primary mt-2">IMDb</a>
           </div>
         </div>
